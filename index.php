@@ -27,6 +27,32 @@ $programmazione[6]->setVoto("3/5");
 $programmazione[8]->setVoto("4/5");
 $programmazione[12]->setVoto("4/5");
 
+$programmazione[0]->setAnno("2001");
+$programmazione[1]->setAnno("2002");
+$programmazione[2]->setAnno("2003");
+$programmazione[7]->setAnno("1925");
+$programmazione[9]->setAnno("2014");
+$programmazione[10]->setAnno("2017");
+$programmazione[11]->setAnno("2017");
+$programmazione[12]->setAnno("2015");
+
+$programmazione[4]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+$programmazione[5]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+$programmazione[6]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+$programmazione[7]->lingua = "<li><b>Lingua originale:</b> Russo (intertitoli)</li>";
+$programmazione[9]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+$programmazione[10]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+$programmazione[11]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+$programmazione[12]->lingua = "<li><b>Lingua originale:</b> Italiano</li>";
+
+$programmazione[0]->titoloOriginale = "<li><b>Titolo originale:</b> The Lord of the Rings: The Fellowship of the Ring</li>";
+$programmazione[1]->titoloOriginale = "<li><b>Titolo originale:</b> The Lord of the Rings: The Two Towers</li>";
+$programmazione[2]->titoloOriginale = "<li><b>Titolo originale:</b> The Lord of the Rings: The Return of the King</li>";
+$programmazione[3]->titoloOriginale = "<li><b>Titolo originale:</b> Sin City</li>";
+$programmazione[7]->titoloOriginale = "<li><b>Titolo originale:</b> Бронено́сец «Потёмкин»</li>";
+$programmazione[8]->titoloOriginale = "<li><b>Titolo originale:</b> El Camino: A Breaking Bad Movie</li>";
+
+
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +69,10 @@ $programmazione[12]->setVoto("4/5");
             foreach($programmazione as $film){
                 echo "<h3>{$film->getTitolo()}</h3>";
                 echo "{$film->getInfo()}";
-                echo "<li><b>Voto:</b> {$film->getVoto()}</li>";
+                echo $film->titoloOriginale;
+                echo $film->getVoto();
+                echo $film->getAnno();
+                echo $film->lingua;
             }
         ?>
     </ul>
